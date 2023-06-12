@@ -6,13 +6,11 @@ Liseth Castillo
 # Flas
 from flask import Flask, request
 
-# Importing the yfinance package
-import yfinance as yf
+# script
+from script import get_stock_data
 
-
+# Inicialización flask
 app = Flask(__name__)
-def get_stock_data(sd, stock, ed):
-    return yf.download(stock, sd, ed)
 
 
 @app.route('/consultar_accion', methods=['GET'])
@@ -21,7 +19,7 @@ def test():
     ticker = data['accion']
     start_date = data['fecha_inicial']
     end_date = data['fecha_final']
-    datos_accion = get_stock_data(start_date,ticker,end_date)
+    datos_accion = get_stock_data(start_date, ticker, end_date)
     ultimos_registros = datos_accion.tail()    
     # Convertir los datos a un formato JSON
     respuesta = ultimos_registros.to_json(orient='index')
