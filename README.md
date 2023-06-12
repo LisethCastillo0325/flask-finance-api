@@ -1,29 +1,29 @@
 # Instrucciones
 
-## Crear entonro virtual
+### Crear entorno virtual
 
 `python3 -m venv venv`
 
-## Activar entorno virtual
+### Activar entorno virtual
 
 `source venv/bin/activate`
 
-## Instalar dependencias
+### Instalar dependencias
 
 `pip install -r requirements.txt`
 
-# Levantar webservice
+### Correr webservice
 
 `python3 app.py`
 
 
-# Ejemplo Ejecución
+# Ejemplo Ejecución endpoint "consultar_accion"
 
-## CURL
+### CURL
 
 `curl -X GET -H 'Content-type: application/json' -d '{"accion": "GOOGL", "fecha_inicial": "2020-01-01", "fecha_final": "2022-01-01"}' http://localhost:5000/consultar_accion`
 
 
-## Python
+### Python
 
 `python3 requests_example.py`
