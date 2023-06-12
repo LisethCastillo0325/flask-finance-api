@@ -3,6 +3,8 @@ Daniel Caicedo
 Liseth Castillo 
 """
 
+from datetime import datetime
+
 # Flas
 from flask import Flask, request
 
@@ -27,4 +29,5 @@ def test():
 
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0',debug=True)
+    print(f"{datetime.now()}")
+    app.run(host='0.0.0.0',debug=True)

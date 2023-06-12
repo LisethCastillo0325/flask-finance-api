@@ -1,4 +1,6 @@
-# Instrucciones
+# Instrucciones de ejecución
+
+## Usando entorno virtual de python
 
 ### Crear entorno virtual
 
@@ -16,8 +18,20 @@
 
 `python3 app.py`
 
+## Usando Docker
 
-# Ejemplo Ejecución endpoint "consultar_accion"
+### Compilar imagen
+
+`docker image build -t zethoc/stock-market:1.0 .`
+
+
+### Ejecutar contenedor
+
+`docker container run --rm --name stock-market -p 5000:5000 zethoc/stock-market:1.0`
+
+
+
+# Ejemplo acceso o consumo de endpoint "consultar_accion"
 
 ### CURL
 
