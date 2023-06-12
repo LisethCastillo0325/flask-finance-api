@@ -35,7 +35,7 @@
 
 ### CURL
 
-`curl -X GET -H 'Content-type: application/json' -d '{"accion": "GOOGL", "fecha_inicial": "2020-01-01", "fecha_final": "2022-01-01"}' http://localhost:5000/consultar_accion`
+`curl -X POST -H 'Content-type: application/json' -d '{"accion": "GOOGL", "fecha_inicial": "2020-01-01", "fecha_final": "2022-01-01"}' http://localhost:5000/consultar_accion`
 
 
 ### Python

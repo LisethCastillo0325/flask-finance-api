@@ -15,7 +15,7 @@ from script import get_stock_data
 app = Flask(__name__)
 
 
-@app.route('/consultar_accion', methods=['GET'])
+@app.route('/consultar_accion', methods=['POST'])
 def test():
     data = request.get_json()
     ticker = data['accion']
